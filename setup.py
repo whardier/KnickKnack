@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 import knickknack
 
-with open('README.txt') as stream:
+with open('README.rst') as stream:
   long_desc = stream.read()
 
 setup(
