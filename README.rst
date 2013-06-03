@@ -18,5 +18,5 @@ Example::
 Installation
 ------------
 
-Simple, download the code from github and run `pip install -e ./` in the directory.  Make sure 
-you have `pip` installed on your system.
+Simple, download the code from github and run ``pip install -e ./`` in the directory.  Make sure 
+you have ``pip`` installed on your system.
