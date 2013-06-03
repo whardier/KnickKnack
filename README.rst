@@ -14,3 +14,9 @@ Example::
         -k c8c4a136-cc21-11e2-8d08-0024d72dc298 \
         -p /output/directory \
         1 2 3 4 5 14 15 18 19 27 28 29
+
+Installation
+------------
+
+Simple, download the code from github and run `pip install -e ./` in the directory.  Make sure 
+you have `pip` installed on your system.
