@@ -18,10 +18,6 @@ setup(
     description = knickknack.__description__,
     url='https://github.com/whardier/KnickKnack',
     long_description = long_desc,
-    install_requires=[
-        'requests',
-        'six',
-    ],
     classifiers = [
         'Programming Language :: Python',
         'Operating System :: OS Independent',
@@ -33,12 +29,13 @@ setup(
         'Natural Language :: English',
         'Topic :: Database',
     ],
+    install_requires=[
+        'requests',
+    ],
     entry_points={
         'console_scripts': [
             'knickknack=knickknack.__main__:main',
         ],
     },
-    setup_requires=['nose'],
-    test_suite='nose.collector',
 )
 

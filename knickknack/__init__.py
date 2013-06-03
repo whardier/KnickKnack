@@ -10,6 +10,6 @@ __license__ = 'None'
 __copyright__ = '2013 Shane R. Spencer'
 __version__ = '0.0.1'
 __status__ = "Prototype"
-__description__ = "KnackHQ Data Dumper (CSV)"
+__description__ = "KnackHQ Data Dumper"
 
-KNOCKHQ_API_URI = "https://api.knackhq.com/v1/"
+KNACKHQ_API_URI = "https://api.knackhq.com/v1"
