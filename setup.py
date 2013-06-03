@@ -20,6 +20,7 @@ setup(
     long_description = long_desc,
     install_requires=[
         'requests',
+        'six',
     ],
     classifiers = [
         'Programming Language :: Python',

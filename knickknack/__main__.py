@@ -4,17 +4,19 @@
 import os
 import sys
 import argparse 
-import pprint
 import logging
+import unicodedata
+
+import six #2 times 3 is.. six.
 
 import requests
 
 import csv
 
-try:
-    import xlwt3 as xlwt
-except ImportError:
-    import xlwt
+#try:
+#    import xlwt3 as xlwt
+#except ImportError:
+#    import xlwt
 
 try:
     import urllib.parse as urlparse
@@ -36,6 +38,7 @@ fieldmap = {
     'Email': 'email',
     'ID': 'id',
     'Identifier': 'identifier',
+    'Timestamp': 'timestamp',
 }
 
 #from collections import OrderedDict
@@ -134,6 +137,13 @@ class Collection(object):
 
                 dicted = True
 
+            if field['type'] in ['date_time']:
+                options = [
+                    'Timestamp',
+                ]
+
+                dicted = True
+
             if field['type'] in ['connection']:
                 options = [
                     'ID',
@@ -211,6 +221,9 @@ class Collection(object):
                             value = '...'
                         else:
                             value = None
+
+                    if isinstance(value, (type(''), type(six.u('')))):
+                        value = unicodedata.normalize('NFKD', value.encode('UTF-8').decode('UTF-8')).encode('ascii', 'ignore')
 
                     _data.append(value)
                 writer.writerow(_data)
